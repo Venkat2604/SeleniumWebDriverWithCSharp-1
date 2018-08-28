@@ -1,0 +1,4 @@
+/Users/matthewrizzini/Desktop/Visual Studio C# Projects/SeleniumC#/Section5/POM/obj/Debug/netcoreapp2.0/POM.csprojAssemblyReference.cache
+/Users/matthewrizzini/Desktop/Visual Studio C# Projects/SeleniumC#/Section5/POM/obj/Debug/netcoreapp2.0/POM.csproj.CoreCompileInputs.cache
+/Users/matthewrizzini/Desktop/Visual Studio C# Projects/SeleniumC#/Section5/POM/obj/Debug/netcoreapp2.0/POM.AssemblyInfoInputs.cache
+/Users/matthewrizzini/Desktop/Visual Studio C# Projects/SeleniumC#/Section5/POM/obj/Debug/netcoreapp2.0/POM.AssemblyInfo.cs
