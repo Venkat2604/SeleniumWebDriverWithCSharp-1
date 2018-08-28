@@ -1,0 +1,4 @@
+/Users/matthewrizzini/Desktop/Visual Studio C# Projects/SeleniumC#/AutoFramework/obj/Debug/netcoreapp2.0/Autoframework.csprojAssemblyReference.cache
+/Users/matthewrizzini/Desktop/Visual Studio C# Projects/SeleniumC#/AutoFramework/obj/Debug/netcoreapp2.0/Autoframework.csproj.CoreCompileInputs.cache
+/Users/matthewrizzini/Desktop/Visual Studio C# Projects/SeleniumC#/AutoFramework/obj/Debug/netcoreapp2.0/Autoframework.AssemblyInfoInputs.cache
+/Users/matthewrizzini/Desktop/Visual Studio C# Projects/SeleniumC#/AutoFramework/obj/Debug/netcoreapp2.0/Autoframework.AssemblyInfo.cs

@@ -2,6 +2,19 @@
   "version": 3,
   "targets": {
     ".NETCoreApp,Version=v2.0": {
+      "DotNetSeleniumExtras.PageObjects.Core/3.12.0": {
+        "type": "package",
+        "dependencies": {
+          "Selenium.WebDriver": "3.12.0",
+          "System.Reflection.DispatchProxy": "4.4.0"
+        },
+        "compile": {
+          "lib/netstandard2.0/SeleniumExtras.PageObjects.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/SeleniumExtras.PageObjects.dll": {}
+        }
+      },
       "Microsoft.CSharp/4.3.0": {
         "type": "package",
         "dependencies": {
@@ -250,22 +263,19 @@
           "lib/netstandard1.3/Newtonsoft.Json.dll": {}
         }
       },
-      "NUnit.ConsoleRunner/3.8.0": {
-        "type": "package"
-      },
-      "ReportUnit/1.5.0-beta1": {
-        "type": "package"
-      },
-      "Selenium.Support/3.14.0": {
+      "NUnit/3.10.1": {
         "type": "package",
         "dependencies": {
-          "Selenium.WebDriver": "3.14.0"
+          "NETStandard.Library": "2.0.0"
         },
         "compile": {
-          "lib/netstandard2.0/WebDriver.Support.dll": {}
+          "lib/netstandard2.0/nunit.framework.dll": {}
         },
         "runtime": {
-          "lib/netstandard2.0/WebDriver.Support.dll": {}
+          "lib/netstandard2.0/nunit.framework.dll": {}
+        },
+        "build": {
+          "build/NUnit.props": {}
         }
       },
       "Selenium.WebDriver/3.14.0": {
@@ -569,6 +579,15 @@
           "ref/netstandard1.5/System.Reflection.dll": {}
         }
       },
+      "System.Reflection.DispatchProxy/4.4.0": {
+        "type": "package",
+        "compile": {
+          "ref/netcoreapp2.0/_._": {}
+        },
+        "runtime": {
+          "lib/netcoreapp2.0/_._": {}
+        }
+      },
       "System.Reflection.Emit/4.3.0": {
         "type": "package",
         "dependencies": {
@@ -861,6 +880,19 @@
     }
   },
   "libraries": {
+    "DotNetSeleniumExtras.PageObjects.Core/3.12.0": {
+      "sha512": "FcwAc221M6DIzy1yiYfed4FfoS6tZsI/Kkb1qGl8ChP9UELMi00VVMrHE+VsOtu9q5BvkoqyD4uXlm/5KJX3/Q==",
+      "type": "package",
+      "path": "dotnetseleniumextras.pageobjects.core/3.12.0",
+      "files": [
+        "dotnetseleniumextras.pageobjects.core.3.12.0.nupkg.sha512",
+        "dotnetseleniumextras.pageobjects.core.nuspec",
+        "lib/net35/SeleniumExtras.PageObjects.dll",
+        "lib/net40/SeleniumExtras.PageObjects.dll",
+        "lib/net45/SeleniumExtras.PageObjects.dll",
+        "lib/netstandard2.0/SeleniumExtras.PageObjects.dll"
+      ]
+    },
     "Microsoft.CSharp/4.3.0": {
       "sha512": "P+MBhIM0YX+JqROuf7i306ZLJEjQYA9uUyRDE+OqwUI5sh41e2ZbPQV3LfAPh+29cmceE1pUffXsGfR4eMY3KA==",
       "type": "package",
@@ -1415,54 +1447,36 @@
         "tools/install.ps1"
       ]
     },
-    "NUnit.ConsoleRunner/3.8.0": {
-      "sha512": "CGgYNNMPmK7/BZ7g36g1GcS3heLN2Zl2aAm54dhOZAXZW3l+3S+imyZ3J9WA+SCiRyBC0PbmkCtb4dVkxoxytw==",
+    "NUnit/3.10.1": {
+      "sha512": "E3ii6+VLdeIxTQ5gPjk/7g/xl+aCifbfcIkiGayZCuos+22FEdtKGrxMe6SzoXCQCcL7gdqhfNIFTaZ1+dS18g==",
       "type": "package",
-      "path": "nunit.consolerunner/3.8.0",
+      "path": "nunit/3.10.1",
       "files": [
-        "CHANGES.txt",
+        "CHANGES.md",
         "LICENSE.txt",
         "NOTICES.txt",
-        "nunit.consolerunner.3.8.0.nupkg.sha512",
-        "nunit.consolerunner.nuspec",
-        "tools/Mono.Cecil.dll",
-        "tools/nunit-agent-x86.exe",
-        "tools/nunit-agent-x86.exe.config",
-        "tools/nunit-agent.exe",
-        "tools/nunit-agent.exe.config",
-        "tools/nunit.engine.api.dll",
-        "tools/nunit.engine.api.xml",
-        "tools/nunit.engine.dll",
-        "tools/nunit.nuget.addins",
-        "tools/nunit3-console.exe",
-        "tools/nunit3-console.exe.config"
-      ]
-    },
-    "ReportUnit/1.5.0-beta1": {
-      "sha512": "vxSEYMQt/0/LXOdFP7o705YvsK/HaysWgS7IhnCsY+GW9/26CLV/kPVq/1REUE8qvjwuGlEz4Iwg5CyfO/WTSA==",
-      "type": "package",
-      "path": "reportunit/1.5.0-beta1",
-      "files": [
-        "reportunit.1.5.0-beta1.nupkg.sha512",
-        "reportunit.nuspec",
-        "tools/ReportUnit.exe"
-      ]
-    },
-    "Selenium.Support/3.14.0": {
-      "sha512": "FhZzfKr1M9zcWWPaiWRTRB+7IC+m8oAUelI5tKn71LIO5aNWdYBv+oDnoyqYefvt5f+sj+jLE7EupOw9oy0rMQ==",
-      "type": "package",
-      "path": "selenium.support/3.14.0",
-      "files": [
-        "lib/net35/WebDriver.Support.dll",
-        "lib/net35/WebDriver.Support.xml",
-        "lib/net40/WebDriver.Support.dll",
-        "lib/net40/WebDriver.Support.xml",
-        "lib/net45/WebDriver.Support.dll",
-        "lib/net45/WebDriver.Support.xml",
-        "lib/netstandard2.0/WebDriver.Support.dll",
-        "lib/netstandard2.0/WebDriver.Support.xml",
-        "selenium.support.3.14.0.nupkg.sha512",
-        "selenium.support.nuspec"
+        "build/NUnit.props",
+        "lib/net20/NUnit.System.Linq.dll",
+        "lib/net20/nunit.framework.dll",
+        "lib/net20/nunit.framework.pdb",
+        "lib/net20/nunit.framework.xml",
+        "lib/net35/nunit.framework.dll",
+        "lib/net35/nunit.framework.pdb",
+        "lib/net35/nunit.framework.xml",
+        "lib/net40/nunit.framework.dll",
+        "lib/net40/nunit.framework.pdb",
+        "lib/net40/nunit.framework.xml",
+        "lib/net45/nunit.framework.dll",
+        "lib/net45/nunit.framework.pdb",
+        "lib/net45/nunit.framework.xml",
+        "lib/netstandard1.6/nunit.framework.dll",
+        "lib/netstandard1.6/nunit.framework.pdb",
+        "lib/netstandard1.6/nunit.framework.xml",
+        "lib/netstandard2.0/nunit.framework.dll",
+        "lib/netstandard2.0/nunit.framework.pdb",
+        "lib/netstandard2.0/nunit.framework.xml",
+        "nunit.3.10.1.nupkg.sha512",
+        "nunit.nuspec"
       ]
     },
     "Selenium.WebDriver/3.14.0": {
@@ -2469,6 +2483,50 @@
         "ref/xamarinwatchos10/_._",
         "system.reflection.4.3.0.nupkg.sha512",
         "system.reflection.nuspec"
+      ]
+    },
+    "System.Reflection.DispatchProxy/4.4.0": {
+      "sha512": "xK6JE0mpsBD+T0qu3V6dmVRa06PxAvIIM/zSjouqP7Sk6X+FQj+9XFRz9GmZk9aJGMU1LX6AgTZIlsYZ64QKsw==",
+      "type": "package",
+      "path": "system.reflection.dispatchproxy/4.4.0",
+      "files": [
+        "LICENSE.TXT",
+        "THIRD-PARTY-NOTICES.TXT",
+        "lib/MonoAndroid10/_._",
+        "lib/MonoTouch10/_._",
+        "lib/net461/System.Reflection.DispatchProxy.dll",
+        "lib/netcoreapp2.0/_._",
+        "lib/netstandard1.3/System.Reflection.DispatchProxy.dll",
+        "lib/netstandard2.0/System.Reflection.DispatchProxy.dll",
+        "lib/xamarinios10/_._",
+        "lib/xamarinmac20/_._",
+        "lib/xamarintvos10/_._",
+        "lib/xamarinwatchos10/_._",
+        "ref/MonoAndroid10/_._",
+        "ref/MonoTouch10/_._",
+        "ref/netcoreapp2.0/_._",
+        "ref/netstandard1.3/System.Reflection.DispatchProxy.dll",
+        "ref/netstandard1.3/System.Reflection.DispatchProxy.xml",
+        "ref/netstandard1.3/de/System.Reflection.DispatchProxy.xml",
+        "ref/netstandard1.3/es/System.Reflection.DispatchProxy.xml",
+        "ref/netstandard1.3/fr/System.Reflection.DispatchProxy.xml",
+        "ref/netstandard1.3/it/System.Reflection.DispatchProxy.xml",
+        "ref/netstandard1.3/ja/System.Reflection.DispatchProxy.xml",
+        "ref/netstandard1.3/ko/System.Reflection.DispatchProxy.xml",
+        "ref/netstandard1.3/ru/System.Reflection.DispatchProxy.xml",
+        "ref/netstandard1.3/zh-hans/System.Reflection.DispatchProxy.xml",
+        "ref/netstandard1.3/zh-hant/System.Reflection.DispatchProxy.xml",
+        "ref/netstandard2.0/System.Reflection.DispatchProxy.dll",
+        "ref/netstandard2.0/System.Reflection.DispatchProxy.xml",
+        "ref/xamarinios10/_._",
+        "ref/xamarinmac20/_._",
+        "ref/xamarintvos10/_._",
+        "ref/xamarinwatchos10/_._",
+        "runtimes/aot/lib/netcore50/System.Reflection.DispatchProxy.dll",
+        "system.reflection.dispatchproxy.4.4.0.nupkg.sha512",
+        "system.reflection.dispatchproxy.nuspec",
+        "useSharedDesignerContext.txt",
+        "version.txt"
       ]
     },
     "System.Reflection.Emit/4.3.0": {
@@ -3676,10 +3734,9 @@
   },
   "projectFileDependencyGroups": {
     ".NETCoreApp,Version=v2.0": [
+      "DotNetSeleniumExtras.PageObjects.Core >= 3.12.0",
       "Microsoft.NETCore.App >= 2.0.0",
-      "NUnit.ConsoleRunner >= 3.8.0",
-      "ReportUnit >= 1.5.0-beta1",
-      "Selenium.Support >= 3.14.0",
+      "NUnit >= 3.10.1",
       "Selenium.WebDriver >= 3.14.0",
       "Selenium.WebDriver.ChromeDriver >= 2.41.0"
     ]
@@ -3691,11 +3748,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/Users/matthewrizzini/Desktop/Visual Studio C# Projects/SeleniumC#/Section6/ConsoleRunner/ConsoleRunner.csproj",
-      "projectName": "ConsoleRunner",
-      "projectPath": "/Users/matthewrizzini/Desktop/Visual Studio C# Projects/SeleniumC#/Section6/ConsoleRunner/ConsoleRunner.csproj",
+      "projectUniqueName": "/Users/matthewrizzini/Desktop/Visual Studio C# Projects/SeleniumC#/AutoFramework/Autoframework.csproj",
+      "projectName": "Autoframework",
+      "projectPath": "/Users/matthewrizzini/Desktop/Visual Studio C# Projects/SeleniumC#/AutoFramework/Autoframework.csproj",
       "packagesPath": "/Users/matthewrizzini/.nuget/packages/",
-      "outputPath": "/Users/matthewrizzini/Desktop/Visual Studio C# Projects/SeleniumC#/Section6/ConsoleRunner/obj/",
+      "outputPath": "/Users/matthewrizzini/Desktop/Visual Studio C# Projects/SeleniumC#/AutoFramework/obj/",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "/usr/local/share/dotnet/sdk/NuGetFallbackFolder"
@@ -3723,22 +3780,18 @@
     "frameworks": {
       "netcoreapp2.0": {
         "dependencies": {
+          "DotNetSeleniumExtras.PageObjects.Core": {
+            "target": "Package",
+            "version": "[3.12.0, )"
+          },
           "Microsoft.NETCore.App": {
             "target": "Package",
             "version": "[2.0.0, )",
             "autoReferenced": true
           },
-          "NUnit.ConsoleRunner": {
+          "NUnit": {
             "target": "Package",
-            "version": "[3.8.0, )"
-          },
-          "ReportUnit": {
-            "target": "Package",
-            "version": "[1.5.0-beta1, )"
-          },
-          "Selenium.Support": {
-            "target": "Package",
-            "version": "[3.14.0, )"
+            "version": "[3.10.1, )"
           },
           "Selenium.WebDriver": {
             "target": "Package",
