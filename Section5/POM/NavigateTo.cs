@@ -17,18 +17,18 @@ namespace POM
         }
 
 
-        public static void LoginFormThroughThePost()
-        {
-            Menu menu = new Menu();
-            TestCasesPage tcPage = new TestCasesPage();
-            UserNameFieldPost ufPost = new UserNameFieldPost();
+        // public static void LoginFormThroughThePost()
+        // {
+        //     Menu menu = new Menu();
+        //     TestCasesPage tcPage = new TestCasesPage();
+        //     UserNameFieldPost ufPost = new UserNameFieldPost();
 
-            menu.TestCases.Click();
-            Thread.Sleep(500);
-            tcPage.UserNameField.Click();
-            Thread.Sleep(500);
-            ufPost.LoginFormLink.Click();
-            Thread.Sleep(500);
-        }
+        //     menu.TestCases.Click();
+        //     Thread.Sleep(500);
+        //     tcPage.UserNameField.Click();
+        //     Thread.Sleep(500);
+        //     ufPost.LoginFormLink.Click();
+        //     Thread.Sleep(500);
+        // }
     }
 }

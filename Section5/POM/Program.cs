@@ -23,7 +23,7 @@ namespace POM
 
             Driver.driver.Navigate().GoToUrl("http://testing.todorvachev.com");
 
-            NavigateTo.LoginFormThroughThePost();
+            // NavigateTo.LoginFormThroughThePost();
 
             Thread.Sleep(500);
 
