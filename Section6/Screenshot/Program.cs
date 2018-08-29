@@ -11,20 +11,22 @@ class EntryPoint
 
     static void Main()
     {
-        string url = "http://google.com";
+            string screenshotsDirectory = Directory.GetCurrentDirectory() + @"\screenshots";
 
 
-        driver.Navigate().GoToUrl(url);
+            driver.Navigate().GoToUrl("https://www.google.com");
 
-        Screenshot googleScreenshot = (driver as ITakesScreenshot).GetScreenshot(); 
+            Screenshot googleScreenShot = ((ITakesScreenshot)driver).GetScreenshot();
 
-        googleScreenshot.SaveAsFile("/Users/matthewrizzini/Desktop/Visual Studio C# Projects/SeleniumC#/Section6/Screenshots/", ScreenshotImageFormat.Png);
+            if (!Directory.Exists(screenshotsDirectory))
+            {
+                Directory.CreateDirectory(Directory.GetCurrentDirectory() + @"\screenshots\");
+            }
 
+            googleScreenShot.SaveAsFile(Directory.GetCurrentDirectory() + @"\screenshots\googlescreenshot.png", ScreenshotImageFormat.Png);
 
-
-
-        driver.Quit();
-    }
+            driver.Quit();
+        }
 
 
 }
